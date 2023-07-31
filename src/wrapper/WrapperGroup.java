@@ -18,13 +18,13 @@ import model.Educator;
 
 public class WrapperGroup {
 
-	private static final String GET_ALL = "select * FROM grupa WHERE Aktivna = 1";
-	private static final String DELETE = "update grupa set Aktivna = 0 WHERE NazivGrupe = ?";
-	private static final String CREATE = "insert into grupa(NazivGrupe,BrojClanova,Aktivna) values (?,0,1)";
-	private static final String GET_EDUCATORS = "{call dohvati_vaspitace_iz_grupe(?)}";
-	private static final String GET_CHILDREN = "{call dohvati_djecu_iz_grupe(?)}";
-	private static final String DELETE_FROM_GROUP = "{call ukloni_iz_grupe(?,?,?)}";
-	public static final String ADD_IN_GROUP = "{call dodaj_osobu_u_grupu(?,?,?,?)}";
+	private static final String GET_ALL = "select * FROM ekindergarten.group WHERE isActive = 1";
+	private static final String DELETE = "update ekindergarten.group set isActive = 0 WHERE name = ?";
+	private static final String CREATE = "insert into ekindergarten.group(name, numberOfMembers, isActive) values (?, 0, 1)";
+	private static final String GET_EDUCATORS = "{call get_educators_from_group(?)}";
+	private static final String GET_CHILDREN = "{call get_children_from_group(?)}";
+	private static final String DELETE_FROM_GROUP = "{call delete_from_group(?,?,?)}";
+	public static final String ADD_IN_GROUP = "{call add_in_group(?,?,?,?)}";
 
 	public static ObservableList<Group> getAll() {
 		ObservableList<Group> groups = FXCollections.observableArrayList();

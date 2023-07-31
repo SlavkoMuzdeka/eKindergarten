@@ -14,9 +14,9 @@ import utils.ConnectionPool;
 
 public class WrapperEducator {
 
-	private static final String GET_ALL = "select * FROM prikaz_vaspitaca";
-	private static final String FIND_LOGED = "select * FROM vaspitac WHERE KorisnickoIme = ? AND Lozinka = ?";
-	private static final String FIND_NAME = "select * FROM pronadji_ime_vaspitaca WHERE KorisnickoIme = ? AND Lozinka = ?";
+	private static final String GET_ALL = "select * FROM show_educators";
+	private static final String FIND_LOGED = "select * FROM educator WHERE username = ? AND password = ?";
+	private static final String FIND_NAME = "select * FROM find_educator_name WHERE username = ? AND password = ?";
 
 	public static boolean isEducator(String username, String password) {
 		Connection c = null;

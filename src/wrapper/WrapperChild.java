@@ -17,8 +17,8 @@ import utils.ConnectionPool;
 
 public class WrapperChild {
 
-	private static final String CREATE = "{call kreiraj_dijete(?,?,?,?,?,?,?,?,?,?)}";
-	private static final String GET_ALL = "select * FROM prikaz_djece";
+	private static final String CREATE = "{call create_child(?,?,?,?,?,?,?,?,?,?)}";
+	private static final String GET_ALL = "select * FROM show_children";
 
 	public static boolean create(String firstName, String lastName, String imbd, Integer streetNumber, String streetName,
 			String city, Integer height, Integer weight, LocalDate dateOfBirth) {
@@ -50,7 +50,7 @@ public class WrapperChild {
 	}
 
 	public static ObservableList<Child> getAll() {
-		ObservableList<Child> listaDjece = FXCollections.observableArrayList();
+		ObservableList<Child> children = FXCollections.observableArrayList();
 		Connection c = null;
 		Statement s = null;
 		ResultSet rs = null;
@@ -61,7 +61,7 @@ public class WrapperChild {
 			rs = s.executeQuery(GET_ALL);
 			SimpleDateFormat dt = new SimpleDateFormat("dd/MM/yyyy");
 			while (rs.next()) {
-				listaDjece.add(new Child(rs.getString(2), rs.getString(3), rs.getString(1), dt.format(rs.getDate(4)),
+				children.add(new Child(rs.getString(2), rs.getString(3), rs.getString(1), dt.format(rs.getDate(4)),
 						rs.getString(5) + "," + rs.getString(6) + "," + String.valueOf(rs.getInt(7)),
 						String.valueOf(rs.getInt(8)), String.valueOf(rs.getInt(9))));
 			}
@@ -70,7 +70,7 @@ public class WrapperChild {
 		} finally {
 			close(c, s, rs);
 		}
-		return listaDjece;
+		return children;
 	}
 
 	private static void close(Connection c, Statement s, ResultSet rs) {

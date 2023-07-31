@@ -16,9 +16,9 @@ import utils.ConnectionPool;
 
 public class WrapperMembership {
 
-	private static String GET_ALL = "{call prikazi_clanarine(?)}";
-	private static String PAY_MEMBERSHIP = "{call uplati_clanarinu(?)}";
-	private static String CREATE_MEMBERSHIP = "{call kreiraj_clanarinu(?,?,?,?)}";
+	private static String GET_ALL = "{call show_membership_fees(?)}";
+	private static String PAY_MEMBERSHIP = "{call pay_membership_fee(?)}";
+	private static String CREATE_MEMBERSHIP = "{call create_membership_fee(?,?,?,?)}";
 
 	public static ObservableList<Membership> getAll(String imbd) {
 		ObservableList<Membership> memberships = FXCollections.observableArrayList();

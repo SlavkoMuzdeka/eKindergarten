@@ -14,9 +14,9 @@ import utils.ConnectionPool;
 
 public class WrapperEvidence {
 
-	private static final String GET_ALL = "call prikaz_evidencija(?)";
-	private static final String SET_ARRIVAL = "{call evidentiraj_dolazak(?,?,?)}";
-	private static final String SET_DEPARTURE = "{call evidentiraj_odlazak(?,?)}";
+	private static final String GET_ALL = "call show_all_evidence(?)";
+	private static final String SET_ARRIVAL = "{call log_arrival(?,?,?)}";
+	private static final String SET_DEPARTURE = "{call log_departure(?,?)}";
 	public static boolean isMembershipPaid;
 
 	public static ObservableList<Evidence> getAll(String imbd) {
