@@ -10,10 +10,10 @@ Follow these steps to set up and run the eKindergarten on your local machine:
 
 1. Prerequisites:
 
-- Install JDK 11 or later: [Java SE Development Kit]('https://www.oracle.com/java/technologies/downloads/#java11')
-- Install Eclipse IDE: [Eclipse IDE for Java Developers]('https://www.eclipse.org/downloads/packages/')
-- Install JavaFX: [JavaFX SDK]('https://openjfx.io/')
-- Install Scene Builder: [Scene Builder Download]('https://gluonhq.com/products/scene-builder/')
+   - Install JDK 11 or later: [Java SE Development Kit]('https://www.oracle.com/java/technologies/downloads/#java11')
+   - Install Eclipse IDE: [Eclipse IDE for Java Developers]('https://www.eclipse.org/downloads/packages/')
+   - Install JavaFX: [JavaFX SDK]('https://openjfx.io/')
+   - Install Scene Builder: [Scene Builder Download]('https://gluonhq.com/products/scene-builder/')
 
 2. Clone the repository:
 
@@ -23,23 +23,23 @@ Follow these steps to set up and run the eKindergarten on your local machine:
 
 3. Open the project in Eclipse IDE:
 
-Click `File > Open Projects from File System`... and select the cloned repository.
+   - Click `File > Open Projects from File System`... and select the cloned repository.
 
 4. Configure JavaFX and Scene Builder in Eclipse:
 
-Follow the instructions on [Eclipse and JavaFX]('https://openjfx.io/openjfx-docs/#eclipse') Setup to set up JavaFX and Scene Builder.
+   - Follow the instructions on [Eclipse and JavaFX]('https://openjfx.io/openjfx-docs/#eclipse') Setup to set up JavaFX and Scene Builder.
 
 5. Set up the MySQL database:
 
-Execute the provided SQL scripts to create the required database schema and tables.
+   - Execute the provided SQL scripts to create the required database schema and tables.
 
 6. Update the database configuration:
 
-In the project source code, locate the database configuration file and provide the necessary credentials to connect to your MySQL database.
+   - In the project source code, locate the database configuration file and provide the necessary credentials to connect to your MySQL database.
 
 7. Run the application:
 
-Right-click on the main class and select Run As > Java Application.
+   - Right-click on the main class and select Run As > Java Application.
 
 ## Key Features
 
