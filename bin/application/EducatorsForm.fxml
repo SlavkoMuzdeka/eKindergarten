@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="580.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.EducatorsController">
+   <top>
+      <AnchorPane prefHeight="110.0" prefWidth="580.0" style="-fx-background-color: #708090;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="44.0" layoutY="30.0" text="Educators:">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
+         </children>
+         <BorderPane.margin>
+            <Insets left="1.0" />
+         </BorderPane.margin>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="390.0" prefWidth="580.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane prefHeight="80.0" prefWidth="580.0">
+               <children>
+                  <Label layoutX="35.0" layoutY="30.0" text="Find educator:">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="findEducatorField" layoutX="195.0" layoutY="23.0" prefHeight="35.0" prefWidth="360.0" />
+               </children></AnchorPane>
+            <AnchorPane layoutY="80.0" prefHeight="310.0" prefWidth="580.0">
+               <children>
+                  <TableView fx:id="educatorsTableView" prefHeight="310.0" prefWidth="580.0" AnchorPane.bottomAnchor="0.0">
+                    <columns>
+                      <TableColumn fx:id="firstNameTableColumn" maxWidth="500.0" minWidth="100.0" prefWidth="100.0" text="Ime" />
+                      <TableColumn fx:id="lastNameTableColumn" maxWidth="500.0" minWidth="100.0" prefWidth="100.0" text="Prezime" />
+                        <TableColumn fx:id="imbdTableColumn" maxWidth="500.0" minWidth="100.0" prefWidth="100.0" text="JMB" />
+                        <TableColumn fx:id="dateOfBirthTableColumn" maxWidth="500.0" minWidth="100.0" prefWidth="100.0" text="Datum rođenja" />
+                        <TableColumn fx:id="addressTableColumn" maxWidth="500.0" minWidth="100.0" prefWidth="180.0" text="Adresa" />
+                    </columns>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

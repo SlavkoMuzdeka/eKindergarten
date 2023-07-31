@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="pane" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="730.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.KindergartenController">
+   <left>
+      <AnchorPane prefHeight="500.0" prefWidth="150.0" style="-fx-background-color: #708090;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="educatorsBtn" layoutY="150.0" mnemonicParsing="false" onAction="#showEducators" prefHeight="40.0" prefWidth="150.0" text="Educators">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Button>
+            <ImageView fitHeight="20.0" fitWidth="30.0" layoutX="15.0" layoutY="160.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icons/group%20(1).png" />
+               </image>
+            </ImageView>
+            <Button fx:id="kindergartenBtn" layoutY="110.0" mnemonicParsing="false" onAction="#viewHome" prefHeight="40.0" prefWidth="150.0" text="Home">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Button>
+            <ImageView fitHeight="20.0" fitWidth="30.0" layoutX="15.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icons/home.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="addChildBtn" layoutY="230.0" mnemonicParsing="false" onAction="#createChild" prefHeight="40.0" prefWidth="150.0" text="Add child">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Button>
+            <ImageView fitHeight="20.0" fitWidth="30.0" layoutX="10.0" layoutY="240.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icons/add-user.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="usernameLabel" alignment="TOP_LEFT" layoutX="30.0" layoutY="422.0">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Button fx:id="logoutBtn" layoutY="460.0" mnemonicParsing="false" onAction="#showLoginForm" prefHeight="40.0" prefWidth="150.0" text="Log out">
+               <effect>
+                  <InnerShadow />
+               </effect>
+               <font>
+                  <Font size="15.0" />
+               </font></Button>
+            <ImageView fitHeight="20.0" fitWidth="30.0" layoutX="20.0" layoutY="470.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icons/exit.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="50.0" fitWidth="75.0" layoutX="50.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icons/kindergarten.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="childrenBtn" layoutY="190.0" mnemonicParsing="false" onAction="#showChildren" prefHeight="40.0" prefWidth="150.0" text="Children">
+               <effect>
+                  <InnerShadow />
+               </effect>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="25.0" fitWidth="40.0" layoutX="13.0" layoutY="198.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icons/children.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </left>
+</BorderPane>
